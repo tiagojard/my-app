@@ -38,7 +38,7 @@ class App extends Component {
         <div>
           <header className="App-header">
           <a href="/" title="Home">
-          <img src={logo} alt="Logo" className="App-logo"/>
+          <img src={sitemap} alt="Logo" className="App-logo"/>
           </a>
            
             <div className="busca">
