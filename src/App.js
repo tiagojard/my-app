@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import logo from './logo.svg';
+import sitemap from './sitemap.xml';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 import Pagina from './componente/pagina';
