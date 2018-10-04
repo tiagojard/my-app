@@ -47,9 +47,9 @@ class home extends Component {
 */
         var result = [];
 		if(this.state.isLoaded == true){
-            document.getElementById("anuncio-topo").innerHTML ='<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> <ins class="adsbygoogle" style="display:inline-block;width:970px;height:90px" data-ad-client="ca-pub-8019971282281713" data-ad-slot="8091665402"></ins> <script> (adsbygoogle = window.adsbygoogle || []).push({}); </script>';
-            document.getElementById("anuncio-esquerdo").innerHTML ='<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> <ins class="adsbygoogle" style="display:inline-block;width:160px;height:600px" data-ad-client="ca-pub-8019971282281713" data-ad-slot="7212185231"></ins> <script> (adsbygoogle = window.adsbygoogle || []).push({}); </script>';
-            document.getElementById("anuncio-direito").innerHTML = '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> <ins class="adsbygoogle" style="display:inline-block;width:160px;height:600px" data-ad-client="ca-pub-8019971282281713" data-ad-slot="6680443014"></ins> <script> (adsbygoogle = window.adsbygoogle || []).push({}); </script>'; result = this.state.itens.map((item, index) =>
+            document.getElementById("anuncio-topo").innerHTML ='<ins class="adsbygoogle" style="display:inline-block;width:970px;height:90px" data-ad-client="ca-pub-8019971282281713" data-ad-slot="8091665402"></ins> <script> (adsbygoogle = window.adsbygoogle || []).push({}); </script>';
+            document.getElementById("anuncio-esquerdo").innerHTML ='<ins class="adsbygoogle" style="display:inline-block;width:160px;height:600px" data-ad-client="ca-pub-8019971282281713" data-ad-slot="7212185231"></ins> <script> (adsbygoogle = window.adsbygoogle || []).push({}); </script>';
+            document.getElementById("anuncio-direito").innerHTML = '<ins class="adsbygoogle" style="display:inline-block;width:160px;height:600px" data-ad-client="ca-pub-8019971282281713" data-ad-slot="6680443014"></ins> <script> (adsbygoogle = window.adsbygoogle || []).push({}); </script>'; result = this.state.itens.map((item, index) =>
             <div key={index}>
                 <div  className="conteudo-home-container">
                     <div className="conteudo-home-img">
