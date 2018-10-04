@@ -17,11 +17,12 @@ class destaque extends Component {
 			.then(
 			  (result) => {
 
+					/*
 				result.push(result[0]);
 				result.push(result[0]);
 				result.push(result[0]);
 				result.push(result[0]);
-				
+				*/
 
 				this.setState({
 				  isLoaded: result != null?true:false,
@@ -51,7 +52,7 @@ class destaque extends Component {
 					</a>
 				</div>
 				<hr className="hr-destaque"/>
-				{ index % 2 != 0 ?<div className="item-destaque-anuncio"></div>:"" }
+				{ /*index % 2 != 0 ?<div className="item-destaque-anuncio"></div>:""*/ }
 			</div>
 			);
 		}

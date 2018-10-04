@@ -50,7 +50,8 @@
     color: #999;
 }
 
-.destaque-direito-home img{
+.anuncio-direito{
     width: 160px;
     height: 600px;
+    float: right;
 }
