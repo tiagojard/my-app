@@ -24,7 +24,7 @@ class pagina extends Component {
             .then(
               (result) => {
                 document.getElementById("busca").value = result.pesquisa;
-
+                document.title = result.titulo;
                 if(result != null)
                 {
                   this.setState({
