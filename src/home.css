@@ -81,12 +81,16 @@
         height: 60px;
     }
     .busca{
-        width: 70%;
+        width: 100%;
     }
     .App-logo{
         display: none;
     }
     .input-busca{
         margin-top: 50px;
+        height: 50px;
+    }
+    .App-header{
+        padding: 15px;
     }
 }
