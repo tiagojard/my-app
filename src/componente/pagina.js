@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../pagina.css';
+import AdSense from 'react-adsense';
 import Destaque from '../componente/destaque';
 import AnuncioConteudo from '../componente/anuncioConteudo';
 import Relacionado from '../componente/relacionado';
@@ -68,13 +69,23 @@ class pagina extends Component {
     var conteudo = document.getElementById("conteudo");
     if(conteudo != null && this.state.isLoaded == true){
       conteudo.innerHTML = this.state.item.conteudo;
-      document.getElementById("anuncio-topo").innerHTML ='<ins class="adsbygoogle" style="display:inline-block;width:970px;height:90px" data-ad-client="ca-pub-8019971282281713" data-ad-slot="8091665402"></ins> <script> (adsbygoogle = window.adsbygoogle || []).push({}); </script>';
-      document.getElementById("anuncio-esquerdo").innerHTML ='<ins class="adsbygoogle" style="display:inline-block;width:160px;height:600px" data-ad-client="ca-pub-8019971282281713" data-ad-slot="7212185231"></ins> <script> (adsbygoogle = window.adsbygoogle || []).push({}); </script>';
     }
 		return (<div className="corpo-pagina">
-                    <div id="anuncio-topo" className="anuncio-topo">
+                    <div className="anuncio-topo">
+                      <AdSense.Google
+                            className='adsbygoogle'
+                            style={{display:'inline-block',width:'970px',height:'90px'}}
+                            client='ca-pub-8019971282281713'
+                            slot='8091665402'
+                            />
                     </div>
-                    <div id="anuncio-esquerdo" className="anuncio-esquerdo">
+                    <div className="anuncio-esquerdo">
+                        <AdSense.Google
+                                className='adsbygoogle'
+                                style={{display:'inline-block',width:'160px',height:'600px'}}
+                                client='ca-pub-8019971282281713'
+                                slot='7212185231'
+                                />
                     </div>
                     <div className="conteudo">
                       <div id="conteudo"></div>

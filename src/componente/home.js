@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import '../home.css';
-import banner160x600 from '../img/banner-160x600.png';
+import AdSense from 'react-adsense';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 class home extends Component {
     constructor(props) {
@@ -39,17 +39,11 @@ class home extends Component {
     }
 
     render(){
-/*
-        <p>{item.descricao}</p>
-        <p>{item.data}</p>
-        <p>{item.assunto}</p>
-        <p>{item.qtdeAcesso}</p>
-*/
+        var banner970x90 = {display:'inline-block',width:'970px',height:'90px'};
+
         var result = [];
 		if(this.state.isLoaded == true){
-            document.getElementById("anuncio-topo").innerHTML ='<ins class="adsbygoogle" style="display:inline-block;width:970px;height:90px" data-ad-client="ca-pub-8019971282281713" data-ad-slot="8091665402"></ins> <script> (adsbygoogle = window.adsbygoogle || []).push({}); </script>';
-            document.getElementById("anuncio-esquerdo").innerHTML ='<ins class="adsbygoogle" style="display:inline-block;width:160px;height:600px" data-ad-client="ca-pub-8019971282281713" data-ad-slot="7212185231"></ins> <script> (adsbygoogle = window.adsbygoogle || []).push({}); </script>';
-            document.getElementById("anuncio-direito").innerHTML = '<ins class="adsbygoogle" style="display:inline-block;width:160px;height:600px" data-ad-client="ca-pub-8019971282281713" data-ad-slot="6680443014"></ins> <script> (adsbygoogle = window.adsbygoogle || []).push({}); </script>'; result = this.state.itens.map((item, index) =>
+            result = this.state.itens.map((item, index) =>
             <div key={index}>
                 <div  className="conteudo-home-container">
                     <div className="conteudo-home-img">
@@ -72,14 +66,35 @@ class home extends Component {
 			);
 		}
         return (<div className="corpo-pagina">
-                    <div id="anuncio-topo" className="anuncio-topo">
+                    <div className="anuncio-topo">
+                        <AdSense.Google
+                            className='adsbygoogle'
+                            style={{display:'inline-block',width:'970px',height:'90px'}}
+                            client='ca-pub-8019971282281713'
+                            slot='8091665402'
+                            />
                     </div>
-                    <div id="anuncio-esquerdo" className="anuncio-esquerdo">
+                    <div className="anuncio-esquerdo">
+                        <AdSense.Google
+                                className='adsbygoogle'
+                                style={{display:'inline-block',width:'160px',height:'600px'}}
+                                client='ca-pub-8019971282281713'
+                                slot='7212185231'
+                                />
+                    </div>
+                    <div className="anuncio-topo">
+                        
                     </div>
                     <div className="conteudo-home">
                     {result}
                     </div>
                     <div id="anuncio-direito" className="anuncio-direito">
+                        <AdSense.Google
+                            className='adsbygoogle'
+                            style={{display:'inline-block',width:'160px',height:'600px'}}
+                            client='ca-pub-8019971282281713'
+                            slot='6680443014'
+                            />
                     </div>
             </div>);
     }
