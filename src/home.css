@@ -41,7 +41,7 @@
 
 .conteudo-home-detalhe{
     width: 80%;
-    height: 150px;
+    height: auto;
     float: right;
     padding-left: 10px;
 }
@@ -54,4 +54,39 @@
     width: 160px;
     height: 600px;
     float: right;
+}
+
+@media only screen and (max-width: 1098px) {
+    .anuncio-topo{
+        display: none;
+    }
+    .anuncio-esquerdo{
+        display: none;
+    }
+    .conteudo-home{
+        width: 100%;
+        margin-left: 0px;
+    }
+    .conteudo-home-container{
+        margin-left: 0px;
+    }
+
+    .img-destaque {
+        width: 60px;
+        height: 60px;
+    }
+
+    .conteudo-home-img {
+        width: 60px;
+        height: 60px;
+    }
+    .busca{
+        width: 70%;
+    }
+    .App-logo{
+        display: none;
+    }
+    .input-busca{
+        margin-top: 50px;
+    }
 }
